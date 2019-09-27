@@ -45,7 +45,7 @@ Product.create([
   {sku: "mon10", price: 1000, sellable_type: "Plant", sellable_id: Plant.find_by(name: 'Monstera').id, amount: rand(25) }
 ])
 
-# Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: rand(25) )}
+Product.all.sample(20).each{ |p| CartProduct.create( cart_id: user.cart.id, product_id: p.id , amount: rand(25) )}
 
 
 # Product.create([
