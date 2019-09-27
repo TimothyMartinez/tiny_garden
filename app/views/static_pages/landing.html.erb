@@ -17,7 +17,7 @@
   </section>
   <section id="Featured-Products" class="center-template">
     <div class="shopfeatprod">
-      <%= react_component 'FeaturedList', props: { plants: @plants, cartItems: @cart_items, cartId: (current_user.cart.id if current_user) }, prerender: false %>
+      <%= react_component 'FeaturedList', props: { plants: @plants, cartItems: @cart_items, cartId: (current_user.cart.id if current_user), user: current_user }, prerender: false %>
     </div>
     <div class="center-template">
       <a href="#" class="blacks">
