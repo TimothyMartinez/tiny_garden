@@ -1,0 +1,259 @@
+/* ----------- Global Styling ----------- */
+.design-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fffaf0;
+  position: fixed;
+}
+
+.design-items {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+/* ----------- Configurator ----------- */
+
+.design-divider-1 {
+  width: 70%;
+}
+
+.configurator-design {
+  height: 80vh;
+  margin-top: 6rem;
+  display: grid;
+  grid-template:
+    '. s s s s s h h'
+    '. s s s s s h h'
+    '. s s s s s h h'
+    '. . . . . . h h'
+    '. k k . . . . .'
+    '. k k . . t t .'
+    '. p p . . t t .'
+    '. . . . . t t .';
+  grid-gap: 5px;
+  width: 100%;
+}
+
+#image-design-1 { grid-area: s; display: block; padding: 30px;}
+#image-design-2 { grid-area: h; display: block; padding: 30px;}
+#image-design-3 { grid-area: t; display: block; padding: 30px;}
+#image-design-4 { grid-area: p; display: block;}
+#image-design-5 { grid-area: k; display: block;}
+
+#image-design-5 img {
+  width: 16%;
+  position: absolute;
+  bottom: 15.5%;
+  left: 6.5%;
+}
+
+#image-design-1 img,
+#image-design-2 img,
+#image-design-3 img,
+#image-design-4 img,
+#image-design-5 img {
+  display: block;
+  position: absolute;
+}
+
+.snake-plant-config{
+  z-index: 0;
+}
+
+.shelf-op0 { opacity: 0; transition: 0.2s;}
+.shelf-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.hangingplant-op0 { opacity: 0; transition: 0.2s;}
+.hangingplant-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.table-op0 { opacity: 0; transition: 0.2s;}
+.table-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.shortpot-op0 { opacity: 0; transition: 0.2s;}
+.shortpot-op0:hover { opacity: 0.5; z-index: 5; transition: 0.2s;}
+
+.shelf-op1 { opacity: 1;}
+.hangingplant-op1 { opacity: 1;}
+.table-op1 { opacity: 1;}
+.shortpot-op1 { opacity: 1;}
+
+.shortpot-op1 img:first-child{
+  z-index: 5;
+}
+
+/* ----------- Side Bar ----------- */
+
+.design-divider-2 {
+  margin-top: 7rem;
+  padding-top: 40px;
+  width: 30%;
+  height: 80vh;
+  background-color: white;
+  display: grid;
+  align-content: space-between;
+  border-radius: 20px 0px 0px 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.plants-grid img {
+  width: 89%;
+}
+
+.design-divider-2 {
+  height: fit-content;
+}
+
+.design-add-plant {
+  font-family: Serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.design-filters {
+  font-family: 'Lato';
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  height: 110px;
+}
+
+.design-results {
+  font-family: 'Lato';
+  font-size: 20px;
+  text-align: center;
+  height: 50px;
+}
+
+.design-results-title {
+  text-align: center;
+  
+}
+
+.design-plant-container {
+  height: 200px;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.add-to-space {
+  border-radius: 50px;
+  font-size: 1.5rem;
+  height: 50px;
+  color:grey;
+  font-family: 'Lato';
+  transition: 0.3s;
+  margin: 0 auto;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.addplant-btn  {
+  width: 70%;
+  margin: auto;
+}
+
+.addplant-btn button:hover{
+  color: black;
+}
+
+.add-to-space:hover {
+  transform: scale(1.1);
+}
+
+.add-to-space:focus {
+  outline: none;
+}
+
+.design-palette {
+  display: flex;
+  background-color: white;
+  position: relative;
+  text-align: center;
+  margin: auto auto 0 auto;
+  width: 520px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 2;
+}
+
+.wall-color-text {
+  text-align: center;
+  margin: auto;
+  font-family: 'Lato';
+}
+
+.palette-color {
+  height: 40px;
+  width: 40px;
+  border-radius:50%;
+  border: solid 1px black;
+  transition: 0.2s;
+}
+
+.palette-color:hover {
+border: solid 5px black;
+transition: 0.2s;
+cursor: pointer;
+transform: scale(1.2);
+
+}
+
+#muzli {
+  background-color: #D6C7EF;
+  margin: auto 10px;
+}
+
+#braden {
+  background-color: #fffaf0;
+  margin: 20px 10px;
+}
+
+#phoca {
+  background-color: #ebf9f6;
+  margin: 20px 10px;
+
+}
+
+#pantone {
+  background-color: #EDD8D8;
+  margin: 20px 10px;
+
+}
+
+#dizark {
+  background-color: #ADBEAD;
+  margin: 20px 10px;
+}
+
+.design-plant-title {
+  font-family: 'Lato';
+  width: 70%;
+  text-align: left;
+  margin: 20px;
+}
+
+.table-size img {
+  width: 9.8%;
+}
+
+.pot-size img {
+  width: 11%;  
+}
+
+.hang-size img {
+  width: 11%;
+
+}
+
+.shelf-size img {
+  width: 27%;
+
+}

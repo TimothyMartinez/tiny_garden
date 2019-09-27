@@ -1,0 +1,95 @@
+#products-wrapper {
+  width: 100%;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 10.1%;
+  margin-bottom: 7%;
+}
+
+.cards-filter {
+  height: 74% !important;
+  width: 20%;
+}
+
+.center-filter-items {
+  display: grid;
+}
+
+.plantlist-wrapper {
+  overflow: scroll;
+  height: 82vh;
+  width: 112vw;
+  padding: 0 115px;
+}
+
+.plantlist-wrapper::-webkit-scrollbar { width: 0 !important }
+
+.check-files {
+  display: block;
+}
+
+.filter-product-box {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.checkbox-layout div {
+  display: block !important;
+  width: auto;
+  margin: auto;
+}
+
+.checkbox-layout {
+  display: inline-flex;
+  flex-direction: row;
+  margin: auto !important;
+  width: 62%;
+}
+
+.filter-list-items {
+  border-top: 2px solid black;
+}
+
+/* 
+.checkbox-layout div:first-of-type {
+  border-top: 2px solid black;
+} */
+
+.form-check-input {
+  position: relative;
+}
+
+.check-alignment {
+  margin-left: 0 !important;
+}
+
+.check-alignment input {
+  margin-right: .7rem;
+}
+
+.filter-header {
+  justify-content: left;
+}
+
+.product-filter-header {
+  margin-bottom: 2rem;
+}
+
+.plant-filter-image {
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hvrbox-width {
+  width: 100%;
+}
+
+.filter-red-bttn {
+  width: 100%;
+}
+

@@ -1,0 +1,171 @@
+#cart-container {
+  background-color: rgb(218, 239, 236);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: auto;
+  padding-right: 3rem;
+}
+
+#cart-header {
+  display: flex;
+  justify-content: center;
+  padding: 3%;
+  font-size: xx-large;
+  padding-top: 7%;
+  font-family: "PT Serif, serif";
+  background-color: rgb(218, 239, 236);
+}
+
+#cart-header h1 {
+  font-weight: 500;
+}
+
+.cart-delete {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  height: 29%;
+}
+
+.cart-delete img {
+  width: 37% !important;
+}
+
+/*  PRODUCTS  */
+
+#products-container::-webkit-scrollbar { 
+  width: 0 !important; 
+}
+
+#products-container {
+  width: 36%;
+  height: 76.3vh;
+  overflow: scroll;
+  font-family: 'Lato', sans-serif;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 17vh;
+  width: 100%;
+  background-color: transparent;
+}
+
+.product-container img {
+  width: 21%;
+}
+
+.product-details {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 4%;
+
+}
+
+.amount-totes {
+  background-color: white;
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+}
+
+.product-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-left {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+.product-btns {
+  
+}
+
+.add-remove {
+  display: flex;
+  width: max-content;
+  border: solid black 1px;
+}
+
+.add-remove button {
+  width: 2rem;
+}
+
+/*  SUMMARY  */
+
+
+#summary {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  width: 21%;
+  height: min-content;
+  line-height: 6vh;
+  margin-right: 0%;
+  margin-left: -26%;
+  padding: 2.1% 2% 2% 2%;
+  background-color: white;
+}
+
+#summary h1 {
+  font-weight: 300;
+  font-size: 5vh;
+}
+
+.summ-lines {
+  background-color: black;
+  height: 1px;
+}
+
+.summ-lines-two {
+  background-color: black;
+  height: 1px;
+}
+
+#summary-details {
+  margin-top: 7%;
+  font-size: 2vh;
+  font-family: 'Lato', sans-serif;
+  width: auto;
+}
+
+#summary-details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#total-line {
+  height: 4px;
+  background-color: black;
+}
+
+/* button */
+
+.btnprimarycart {
+  background-color: rgb(255, 180, 0);
+  color: white;
+  width: 84%;
+  height: auto;
+  border-radius: 40px;
+  transition: 0.3s;
+  margin: auto;
+  font-size: larger;
+}
+
+.btnprimarycart a:visited {
+  color: white;
+}
+
+.btnprimarycart:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}

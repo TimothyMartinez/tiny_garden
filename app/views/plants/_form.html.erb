@@ -1,0 +1,39 @@
+<div class="row">
+  <%= form_with(model: plant, local: true, multipart: true) do |form| %>
+
+    <%= render 'products/form', form: form %>
+
+    <div class="form-group ">
+      <%= form.label :name, required: true%>
+      <%= form.text_field :name, class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= form.label :size %>
+      <%= form.select :size, options_for_select(Plant.sizes), required: true, prompt: 'Please select...' %>
+    </div>
+    <div class="form-group ">
+      <%= form.label :light %>
+      <%= form.select :light, Plant.lights, required: true, prompt: 'Please select...'  %>
+    </div>
+    <div class="form-group ">
+      <%= form.label :maintenance %>
+      <%= form.select :maintenance, Plant.maintenances, required: true, prompt: 'Please select...'  %>
+    </div>
+    <div class="form-group ">
+      <%= form.label :category %>
+      <%= form.select :category, Plant.categories, required: true, prompt: 'Please select...'  %>
+    </div>
+    <div class="form-group ">
+      <%= form.label :description %>
+      <%= form.text_area :description, class:"form-control", required: true %>
+    </div>
+    <div class="form-group ">
+      <%= form.label :images %>
+      <%= form.file_field :images, id: 'images-upload', class:"form-control", required: true, multiple: true, accept: 'image/*' %>
+    </div>
+    <button type="submit"class="btn btn-primary">Submit</button>
+  <% end %>
+</div>
+
+<!-- currently not able to edit images, it will be able to add more though -->
+<%= render 'utils/image_previewer' %>

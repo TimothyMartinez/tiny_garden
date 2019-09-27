@@ -1,0 +1,22 @@
+<div id="attachments"></div>
+
+<script>
+  // this awesome piece of code listens for change ion the input then creates a blob (temporary memory file) of the image and displays it in the empty div 🦄🌈😃
+  const previewMultipleImages = e => {
+    if (e.target.files && e.target.files[0]) {
+      let mediaPreview = document.getElementById("attachments")
+      mediaPreview.innerHTML = ""
+      Array(e.target.files.length).fill().forEach( function(x, index) {
+        let reader = new FileReader();
+        reader.onload = ev => {
+          let img = document.createElement("img")
+          img.height = "200"
+          img.src = ev.target.result
+          mediaPreview.appendChild(img)
+        }
+        reader.readAsDataURL(e.target.files[index]);
+      })
+    }
+  }
+  document.getElementById('images-upload').addEventListener('change', previewMultipleImages)
+</script>

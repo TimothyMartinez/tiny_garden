@@ -1,0 +1,111 @@
+.doctor-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.doctor-question{
+  font-size: 40px;
+  font-family: 'Serif';
+  text-align: center;
+  height: 70px;
+  margin-top: 57px;
+}
+
+.box-container-1{
+  display:grid;
+  height: 61vh;
+  margin-top: 15px;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+.box-container-2{
+  display:grid;
+  height: 61vh;
+  margin-top: -130px;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+.box{
+  width: 33%;
+  height: 70%;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: Serif; 
+  font-size: 25px;
+  background-position: center; 
+  background-size: 80% 90%;
+}
+
+#plant-box-1 {
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/paleleaf.png);
+  margin-left: 111px;
+  margin-right: -43px;
+  margin-bottom: 21px;
+  text-decoration: none;
+}
+
+#plant-box-2 {
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/droopyleaf.png);
+  margin-right: -7px;
+  margin-left: -119px;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+#plant-box-3 {
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/brownleaf.png);
+  margin-left: -199px;
+  margin-bottom: 22px;
+  text-decoration: none;
+}
+
+#plant-box-4 {
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/blackspotleaf.png);
+  margin-left: 109px;
+  margin-right: -45px;
+  text-decoration: none;
+}
+
+#plant-box-5 {
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/lightgrowleaf.png);
+  margin-left: -134px;
+  margin-right: -21px;
+  text-decoration: none;
+}
+
+#plant-box-6 {
+  background-image: url(http://tinygarden-bucket.herokuapp.com/images/brownleaf.png);
+  margin-right: 44px;
+  margin-left: -154px;
+}
+
+
+.ailment{
+  margin: 70px;
+  border: 5px solid transparent;
+  font-size: 30px;
+}
+
+.plant-doc-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  text-decoration: none;
+  padding: 10px;
+  margin: 20px;
+  place-items: center;
+}
+
+.pd-grid-item {
+  font-family:'Lato';
+  color: white;
+  padding: 15px;
+  font-size: 25px;
+  font-family: 'PT Serif', serif;
+  text-align: center;
+  border-radius: 24px;
+  height: 389px;
+  width: 327px;
+  background-repeat: no-repeat;
+}

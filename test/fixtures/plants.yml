@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  light: 1
+  size: 1
+  maintenance: 1
+  category: 1
+  description: MyString
+
+two:
+  name: MyString
+  light: 1
+  size: 1
+  maintenance: 1
+  category: 1
+  description: MyString

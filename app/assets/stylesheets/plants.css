@@ -1,0 +1,153 @@
+.c-modal-cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transform: translateZ(0);
+  background-color: rgba(38, 50, 56, 0.93);
+  transition: all 0.4s;
+  animation: fadeIn 0.3s;
+}
+
+.plant-details {
+  list-style: none;
+  padding: 0;
+  font-size: 0.7em;
+  font-family: 'Lato', sans-serif;
+}
+
+.plant-details li {
+  color: black;
+}
+
+.detail-type {
+  color: #00927A;
+}
+
+.modalWrapper {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 0.5fr 1fr 1fr;
+}
+
+.modal-title {
+  font-size: 2.7em;
+  margin-bottom: 2.9%;
+  font-family: 'Grenze';
+  font-family: 32px;
+}
+
+.c-modal_body img {
+  padding-left: 11%;
+  width: 32%;
+}
+
+.plant-modal h1 {
+  font-weight: 300;
+  color: #00927A;
+}
+
+.guarantee {
+  font-size: 0.7em;
+}
+
+.g-description {
+  font-size: 0.7em;
+}
+
+.plant-modal {
+  font-family: 'serif';
+  color: #00927A;
+  width: 40.8%;
+  margin-left: 1.4%;
+  text-align: left;
+  height: auto;
+  margin-top: 3%;
+  padding-left: 6rem;
+  position: relative;
+  font-size: xx-large;
+}
+
+.add-to-cart {
+  margin: 0;
+  width: auto;
+  height: 1.9rem;
+  color: white;
+  font-size: inherit;
+}
+
+.cart-modal-navlink {
+  display: flex;
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  border-bottom: .1em solid black;
+}
+
+.back-arrow {
+  height: 1.6rem;
+}
+
+.c-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 98%;
+  height: 99%;
+  border-radius: 5px;
+  padding: 0em 1.5em 1.5em 1.5em;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 3px rgba(55, 71, 79, 0.3);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  transition: transform 0.7s, opacity 0.4s;
+  transform: translate(-50%, -70%);
+  animation: fadeIn 0.6s ease, slideIn 0.6s;
+}
+
+.c-modal_body {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.modal-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.slideIn {
+  transform: translate(-50%, -50%);
+  transition: transform 0.7s, opacity 0.4s;
+  opacity: 1;
+}
+.fadeIn {
+  opacity: 1;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+

@@ -1,0 +1,212 @@
+/* ----------------- NAVBAR ----------------- */
+
+#navbar {
+  height: 6rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+.nav-color {
+  background-color: white;
+  transition: ease-in;
+  transition-duration: .2s;
+}
+
+.nav-transparent {
+  background-color: transparent;
+  transition-duration: .2s;
+}
+
+#inner-nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#inner-nav li {
+  margin: 0 3%;
+}
+
+#navbar a:visited {
+  color: black;
+}
+
+#navbar ol,
+#navbar ul, 
+#navbar li {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+#navbar a:hover, 
+#navbar a:focus, 
+#navbar a:active {
+  color: #999;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#navbar a {
+  position: relative;
+  display: block;
+  padding: 9px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+  color: rgb(0,146,122);
+  text-decoration: none;
+  transition: color 0.1s, background-color 0.1s;
+}
+
+#navbar a:active {
+  width: auto;
+}
+
+#navbar a.nav-active {
+  content: '';
+  display: block;
+  position: relative;
+  padding: 1.16vh 0;
+  height: 100%;
+  border-bottom: 3px solid black;
+  transition: color 0.1s,transform 0.2s ease-out;
+  transform-origin: right top;
+  transform: scale(1,1);
+}
+
+#navbar a:hover::before, 
+#navbar a:focus::before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+  border-bottom: 3px solid black;
+}
+
+.title {
+  font-size: 2.7em;
+  margin-right: 0.7vw;
+  margin-bottom: 0;
+  font-family: 'Grenze';
+  font-family: 32px;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-design-btn {
+  width: 23%;
+  margin: 0;
+  height: auto;
+  font-size: 2.1vh;
+  background-color: transparent;
+  color: white;
+  border: solid 3px rgb(0,146,122);
+}
+
+
+button #design-link-outline {
+  border: lightgreen 2px solid;
+  border-radius: 40px;
+}
+
+.title a {
+  text-transform: lowercase !important;
+  font-size: 83%;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  cursor: text;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  line-height: 2rem;
+  font-size: medium;
+  z-index: 1;
+  top: 2.7rem;
+  right: 0rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#inner-nav {
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.right-side-nav {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  width: 34%;
+  display: flex;
+  justify-content: center;
+}
+
+.left-side-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  width: 35%;
+  padding-left: 17rem;
+  justify-content: center;
+}
+
+#navbar nav {
+  background-color:rgb(241, 240, 240);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+
+#cart a:link,
+#cart a:visited, 
+#cart a:active {
+  width: 3.3vw;
+  display: flex;
+  justify-content: center;
+}
+
+#cart {
+transition: transform 1s;
+}
+
+#cart:hover {
+transform: rotateY(360deg);
+}
+
+#cart a.nav-active {
+  display: grid;
+  place-items: center;
+}
+
+#navspacer {
+  margin-top: 2.3rem;
+}

@@ -1,0 +1,55 @@
+ <div class="row">
+ <div class="col-8 offset-2">
+  <form method="GET">
+    <label>Add a product to the Inventory</label>
+    <div class="row">
+      <div class="col-6">
+        <%= submit_tag 'Add a Plant', formaction: new_plant_path, class: 'btn btn-block btn-outline-success' %>
+      </div>
+      <div class="col-6">
+        <%= submit_tag 'Add an Accessory', formaction: new_accessory_path, class: 'btn btn-block btn-outline-info' %>
+      </div>
+    </div>
+  </select>
+</div>
+
+<div class="row">
+  <% @products.each_with_index do |product, i| %>
+    <div class="col col-sm-6 col-md-3 mt-3">
+      <div class="card">
+        <% if product.sellable.images.empty? %>
+          <%= image_tag 'http://placepuppy.net/100/100' %>
+        <% else %>
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+            <% product.sellable.images.each do |img| %>
+              <div class="carousel-item active">
+                <%= image_tag img, height: 100 %>
+              </div>
+            <% end %>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        <% end %>
+        <div class="card-body">
+          <h5 class="card-title"><%= product.sellable.name %></h5>
+          <p class="card-text"><%=product.sellable.description %></p>
+          <dl>
+            <dt>test</dt>
+            <dd>data</dd>
+          </dl>
+        </div>
+        <div class="card-footer">
+          <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-sm btn-primary' %></td>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

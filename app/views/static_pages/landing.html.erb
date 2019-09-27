@@ -1,0 +1,113 @@
+<div class="homepage-general">
+  <section id="welcome">
+    <div class="center-template background-welcome">
+      <h1>Small spaces didn't stop us.</h1>
+      <h4>Plants are always a good idea. Bring your garden
+      <br>inside and customize it to fit your space</h4>
+      <div class="center-template">
+        <button class="btn-round yellow" >
+          <%= link_to "Design your space", design_path %>
+        </button>
+      </div>
+      <div class="feat-title1">
+        <h2>Featured Products</h2>
+        <h5>Shop your perfect match</h5>
+      </div>
+    </div>
+  </section>
+  <section id="Featured-Products" class="center-template">
+    <div class="shopfeatprod">
+      <%= react_component 'FeaturedList', props: { plants: @plants, cartItems: @cart_items, cartId: (current_user.cart.id if current_user) }, prerender: false %>
+    </div>
+    <div class="center-template">
+      <a href="#" class="blacks">
+        See all products
+      </a>
+    </div>
+  </section>
+  <section id="how-it-works">
+    <div class="gif-background center-how-it-works">
+      <h1>How it works</h1>
+    </div>
+    <div class="center-template bg-pink">
+
+      <button class="btn-round black">
+        Start designing
+      </button>
+    </div>
+  </section>
+  <section id="why-plants" class="center-template">
+    <div class="background-why-plants">
+      <div class="feat-title2">
+        <h2>Why plants?</h2>
+      </div>
+    </div>
+
+    <div class="threecol">
+      <div class="care-padding">
+        <div class="extramargin">
+          <h3>Mental and Physical Health</h3>
+          <p>Studies have shown indoor plants improve concentration and productivity, reduce stress levels, and boost your mood.</p>
+        </div>
+      </div>
+      <div class="care-padding">
+        <div class="extramargin">
+          <h3>Cooking</h3>
+          <p>Garnish your cocktails with fresh mint and rosemary, or make your own pesto with homegrown basil. </p>
+        </div>
+      </div>
+      <div class="care-padding">
+        <div class="extramargin">
+          <h3>Plants Fight Pollution</h3>
+          <p>Certain varieties clean indoor air by absorbing toxins, increasing humidity and producing oxygen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="care-basics">
+    <div>
+      <h2 class="title">Care Basics</h2>
+
+    </div>
+    <div class="card-content">
+      <div class="inner-card1">
+        <%= image_tag 'http://tinygarden-bucket.herokuapp.com/images/planticon1.png', alt: 'hey'%>
+        <h2>Light</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      </div>
+      <div class="inner-card2">
+        <%= image_tag 'http://tinygarden-bucket.herokuapp.com/images/planticon2.png', alt: 'hey'%>
+        <h2>Water</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      </div>
+      <div class="inner-card3">
+        <%= image_tag 'http://tinygarden-bucket.herokuapp.com/images/planticon3.png', alt: 'hey'%>
+        <h2>Potting</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+      </div>
+    </div>
+    <div class="browse-articles">
+      <h3>Browse Articles</h3>
+    </div>
+  </section>
+  <section id="instagram">
+
+  </section>
+  <div class="elfsight-app-07353ff7-396e-49df-a45b-3f52a5bd0130"></div>
+    <div id="mytinygarden">
+        #mytinygarden 
+    </div>
+  </div>
+  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+
+  <%#div class="instafeed">
+    <% @insta_feed.each do |image| %>
+      <%#= image_tag image.images.thumbnail.url%>
+  <%#% end %>
+  <%#/div>
+  <div id="mytinygdn">
+    <p> #mytinygarden </p>
+  </div>
+  <%# This is a great comment! %>
+
+</div>

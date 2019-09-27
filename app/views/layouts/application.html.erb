@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Tiny Garden</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Grenze&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'product' %>
+
+  </head>
+
+  <body>
+    <nav id="navbar" >
+      <div id="inner-nav">
+        <ul class="left-side-nav">
+          <li><%= link_to "Shop", products_path, class: params[:action] == 'index' ? 'nav-active' : ''  %></li>
+          <li id="care-nav-link"><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
+          <button class="btn-round yellow nav-design-btn" >
+            <%= link_to "Design", design_path %>
+          </button>
+        </ul>
+        <div class="animated bounce title">
+          <%= link_to 'tiny garden', root_path %>
+        </div>
+        <div class="right-side-nav">
+          <div class="dropdown" id="loginBox-position">
+            <a href="#" id="drop-styles"><%= current_user ? "Account" : "login" %></a>
+            <div class="dropdown-content">
+              <%= link_to('Profile', current_user,
+                class: ('nav-active' if params[:action] == 'show' && params[:controller] == 'users')) if current_user
+              %>
+              <%= link_to('Logout', destroy_user_session_path,
+                method: 'delete',
+                class: ('nav-active' if params[:action] == 'destroy' && params[:controller] == 'devise/registrations')) if current_user
+              %>
+              <%= link_to('Edit', edit_user_registration_path,
+                class: ('nav-active' if params[:action] == 'edit' && params[:controller] == 'devise/registrations')) if current_user
+              %>
+              <%= link_to('Log In', new_user_session_path,
+                class: ('nav-active' if params[:action] == 'new' && params[:controller] == 'devise/sessions')) unless current_user
+              %>
+              <%= link_to('Sign Up', new_user_registration_path,
+                class: ('nav-active' if params[:action] == 'new' && params[:controller] == 'devise/registrations')) unless current_user
+              %>
+            </div>
+          </div>
+          <span id="cart" >
+          <%= link_to image_tag("cart.png"), cart_path, 
+            class: params[:action] == 'cart' ? 'nav-active' : ''
+          %></span>
+        </div>
+      </div>
+    </nav>
+    <div id="main">
+      <%= yield %>
+    </div>
+    <footer id="general-footer">
+      <div class="footer-box">
+        <div class="footer-left">
+          <h2>tiny garden</h2>
+          <p>Copyright. All rights reserved.</p>
+          <p>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law</p>
+        </div>
+        <div class="footer-right">
+          <a id="facebook" href="https://www.facebook.com/" target="_blank">
+            <%= image_tag 'http://tinygarden-bucket.herokuapp.com/images/facebookicon.png', alt: 'Facebook'%>
+          </a>
+          <a id="youtube" href="https://www.youtube.com/" target="_blank">
+            <%= image_tag 'http://tinygarden-bucket.herokuapp.com/images/youtubeicon.png', alt: 'Youtube'%>
+          </a>
+          <a id="instagram" href="https://www.instagram.com/" target="_blank">
+            <%= image_tag 'http://tinygarden-bucket.herokuapp.com/images/instaicon.png', alt: 'Instagram'%>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

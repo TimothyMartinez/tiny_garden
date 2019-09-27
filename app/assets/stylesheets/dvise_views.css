@@ -1,0 +1,44 @@
+a:hover {
+  text-decoration: none;
+}
+
+.form-wrapper a:link {
+  text-decoration: none;
+  color: black;
+}
+
+.form-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  place-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 7%;
+}
+
+.form-wrapper form {
+  width: 29%;
+}
+
+.field input {
+  width: 100%;
+}
+
+.field input[type="checkbox"] {
+  width: 3%
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 13%;
+
+}
+
+.not-happy {
+  display: grid;
+  margin-bottom: 2%;
+}
+

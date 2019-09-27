@@ -1,0 +1,160 @@
+<section class= "design-wrapper">
+  <div id="config-wrapper" class= "design-items">
+    <div class="design-divider-1">
+      <div class="configurator-design">
+        <div id="image-design-1">
+            <div class="op1 shelf-size">
+              <%= image_tag 'Design/TinyGarden-Configurator-13.png', alt: 'hey'%>
+            </div>
+            <div id="shelf-select" class="shelf-op0 shelf-size" onclick="shelf()">
+              <%= image_tag 'Design/TinyGarden-Configurator-01.png', alt: 'hey'%>
+            </div>
+        </div>
+        <div id="image-design-2">
+            <div class="op1 hang-size">
+              <%= image_tag 'Design/TinyGarden-Configurator-14.png', alt: 'hey'%>
+            </div>
+            <div id="hangingplant-select" class="hangingplant-op0 hang-size" onclick="hangingplant()">
+              <%= image_tag 'Design/TinyGarden-Configurator-02.png', alt: 'hey'%>
+            </div>
+        </div>
+        <div id="image-design-3">
+            <div class="op1 table-size">
+              <%= image_tag 'Design/TinyGarden-Configurator-15.png', alt: 'hey'%>
+            </div>
+            <div id="table-select" class="table-op0 table-size" onclick="table()">
+              <%= image_tag 'Design/TinyGarden-Configurator-03.png', alt: 'hey'%>
+            </div>
+        </div>
+        <div id="image-design-4">
+          <div class="op1 pot-size">
+            <%= image_tag 'Design/TinyGarden-Configurator-16.png', alt: 'hey'%>
+          </div>
+          <div id="shortpot-select" class="shortpot-op0 pot-size" onclick="shortpot()">
+            <%= image_tag 'Design/TinyGarden-Configurator-04.png', alt: 'hey'%>
+          </div>
+        </div>
+        <div id="image-design-5" class="snake-plant-config" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+          <div>
+          </div>
+        </div>
+      </div>
+    <div class= "design-palette">
+      <div class="wall-color-text"> Background color </div>
+        <div id="dizark"  onclick="btnDizark()"   class="palette-color"></div>
+        <div id="pantone" onclick="btnPantone()"  class="palette-color"></div>
+        <div id="braden"  onclick="btnBraden()"   class="palette-color"></div>
+        <div id="phoca"   onclick="btnPhoca()"    class="palette-color"></div>
+        <div id="muzli"   onclick="btnMuzli()"    class="palette-color"></div>
+      </div>
+    </div>
+    <div class= "design-divider-2">
+      <div class= "design-add-plant">
+        Drag & Drop your plant!
+      </div>
+      <div class= "plants-grid" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <%= image_tag 'Plants/Transparent/Snake_Plant-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag1"%>
+        <%= image_tag 'Plants/Transparent/Chinese_Evergreen-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag2"%>
+        <%= image_tag 'Plants/Transparent/Rosemary-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag3"%>
+        <%= image_tag 'Plants/Transparent/Basil-300.png', alt: 'hey', draggable: "true", ondragstart: "drag(event)", id: "drag4" %>
+      </div>
+      <div class="design-results-title">
+        Total : $50
+        <div class="addplant-btn">
+          <button id="<%=current_user.cart.id%>" data="<%= @success_url %>" class="cart-button add-to-space" onclick="addToCart()" type="button">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+
+const token = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+const headers = {
+  'X-Requested-With': 'XMLHttpRequest',
+  'X-CSRF-TOKEN': token
+};
+
+async function addToCart() {
+  const plants = [
+    { id: 5, plant: document.querySelector('.plants-grid #drag1') },
+    { id: 1, plant: document.querySelector('.plants-grid #drag2') },
+    { id: 7, plant: document.querySelector('.plants-grid #drag3') },
+    { id: 3, plant: document.querySelector('.plants-grid #drag4') }
+  ]
+  const cartButton = document.querySelector('.cart-button')
+  const cartID = cartButton ? cartButton.id : String()
+  const requests = plants.map(({ id, plant }) => !plant && axios.post(`/carts/${cartID}/cart_products`, { product_id: id }, { headers }))
+  await Promise.all(requests)
+  window.location.href = cartButton ? cartButton.getAttribute('data') : window.location.href
+}
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+function shelf() {
+  if( document.getElementById("shelf-select").classList.contains('shelf-op0')){
+    document.getElementById("shelf-select").classList.add('shelf-op1');
+    document.getElementById("shelf-select").classList.remove('shelf-op0');
+  } else {
+    document.getElementById("shelf-select").classList.add('shelf-op0');
+    document.getElementById("shelf-select").classList.remove('shelf-op1');
+  }
+}
+function shortpot() {
+  if( document.getElementById("shortpot-select").classList.contains('shortpot-op0')){
+    document.getElementById("shortpot-select").classList.add('shortpot-op1');
+    document.getElementById("shortpot-select").classList.remove('shortpot-op0');
+  } else {
+    document.getElementById("shortpot-select").classList.add('shortpot-op0');
+    document.getElementById("shortpot-select").classList.remove('shortpot-op1');
+  }
+}
+function table() {
+  if( document.getElementById("table-select").classList.contains('table-op0')){
+    document.getElementById("table-select").classList.add('table-op1');
+    document.getElementById("table-select").classList.remove('table-op0');
+  } else {
+    document.getElementById("table-select").classList.add('table-op0');
+    document.getElementById("table-select").classList.remove('table-op1');
+  }
+}
+function hangingplant() {
+  if( document.getElementById("hangingplant-select").classList.contains('hangingplant-op0')){
+    document.getElementById("hangingplant-select").classList.add('hangingplant-op1');
+    document.getElementById("hangingplant-select").classList.remove('hangingplant-op0');
+  } else {
+    document.getElementById("hangingplant-select").classList.add('hangingplant-op0');
+    document.getElementById("hangingplant-select").classList.remove('hangingplant-op1');
+  }
+}
+  function btnDizark() {
+    document.getElementById("config-wrapper").style.backgroundColor="#ADBEAD";
+}
+  function btnPantone() {
+    document.getElementById("config-wrapper").style.backgroundColor="#EDD8D8";
+}
+  function btnPhoca() {
+    document.getElementById("config-wrapper").style.backgroundColor="#ebf9f6";
+}
+  function btnBraden() {
+    document.getElementById("config-wrapper").style.backgroundColor="#fffaf0";
+}
+  function btnMuzli() {
+    document.getElementById("config-wrapper").style.backgroundColor="#D6C7EF";
+}
+  function switch_states() {
+    document.getElementById("config-wrapper").style.backgroundColor="#D6C7EF";
+}
+</script>

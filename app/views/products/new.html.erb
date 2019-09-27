@@ -1,0 +1,23 @@
+<%= render 'form', product: @product %>
+
+
+
+<%#= form_with(model: @product, local: true) do |form| %>
+  <%# <div class="form-group col-md-3"> %>
+    <%#= form.label :sku %>
+    <%#= form.text_field :sku, class:"form-control" %>
+  <%# </div> %>
+  <%# <div class="form-group col-md-3"> %>
+    <%#= form.label :price %>
+    <%#= form.text_field :price, class:"form-control" %>
+  <%# </div> %>
+  <%# <div class="form-group col-md-3"> %>
+    <%#= form.select :sellable_type, ['Plant', 'Accessory']%>
+    <%#= form.check_box(:sellable_type) %>
+    <%#= form.label(:sellable_type, "Plant") %>
+    <%#= form.check_box(:sellable_type) %>
+    <%#= form.label(:sellable_type, "Accessory") %>
+  <%# </div> %>
+  <%#= form.hidden_field :sellable_id, value: @product, class:"form-control" %>
+  <%# <button type="submit" class="btn btn-primary">Submit</button> %>
+<%# end %>

@@ -1,0 +1,50 @@
+/* ----------------- Global Footer ----------------- */
+
+#general-footer{
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(28,81,81);
+  color: white;
+}
+#general-footer .footer-box{
+  grid-template-columns: 2fr 1fr;
+  display: grid;
+  margin: auto;
+}
+
+#general-footer .footer-left{
+  margin: auto 5%;
+  padding: 40px;
+}
+
+#general-footer .footer-left h2{
+  font-family: 'Grenze', serif;
+}
+
+#general-footer .footer-left p{
+  margin-block-start: 0px;
+  margin-block-end: 15px;
+}
+
+#general-footer img{
+  /* height: 50px; */
+  cursor: pointer;
+  margin: 10px;
+}
+
+#general-footer .footer-right{
+  margin: auto 10%;
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  #general-footer .box{
+  display: flex;
+  flex-wrap: wrap;
+  }
+  #general-footer .footer-right{
+    margin: auto 5%;
+    padding: 0 40px;
+  }
+}
