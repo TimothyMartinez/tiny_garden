@@ -21,7 +21,7 @@ class FeaturedList extends Component {
   }
 
   componentDidUpdate() {
-    if(this.state.refetch == false){
+    if(this.state.refetch){
       this.fetchData()
     }
   }
@@ -36,17 +36,20 @@ class FeaturedList extends Component {
     this.setState({ cartItems: data.cartItems, refetch: false })
   }
 
-  addCart = (id)  => {
+  addCart = async (id) => {
     const { cartItems } = this.state
     const { cartId } = this.props
     const item = cartItems.find((cartItem => cartItem.sellableId === id)) || {}
     const postUrl = `/carts/${cartId}/cart_products`
     const patchUrl = `/carts/${cartId}/cart_products/${item.id}`
     console.log(item.amount)
-    if(item.amount) {
-      axios.patch(patchUrl, { amount: item.amount + 1 }, { headers }) 
+    if(item.sellableId === id) {
+      await axios.patch(patchUrl, { amount: item.amount + 1 }, { headers }) 
+      this.setState({ refetch: true })
     } else {
-      axios.post(postUrl , { product_id: id }, { headers })
+      console.log("post it")
+      await axios.post(postUrl , { product_id: id }, { headers })
+      this.setState({ refetch: true })
     }
   } 
 
