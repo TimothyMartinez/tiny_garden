@@ -1,3 +1,9 @@
+@media only screen and (max-width: 200px) {
+  #navbar a {
+    height: 25% !important;
+  }
+}
+
 #products-wrapper {
   width: 100%;
   display: flex;
@@ -8,11 +14,6 @@
   margin-bottom: 7%;
 }
 
-.cards-filter {
-  height: 74% !important;
-  width: 20%;
-}
-
 .center-filter-items {
   display: grid;
 }
@@ -20,7 +21,7 @@
 .plantlist-wrapper {
   overflow: scroll;
   height: 82vh;
-  width: 112vw;
+  width: 100%;
   padding: 0 115px;
 }
 
@@ -39,7 +40,7 @@
 .checkbox-layout div {
   display: block !important;
   width: auto;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .checkbox-layout {
@@ -92,4 +93,5 @@
 .filter-red-bttn {
   width: 100%;
 }
+
 

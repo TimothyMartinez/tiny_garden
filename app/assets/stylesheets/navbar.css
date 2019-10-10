@@ -102,7 +102,7 @@
   width: 23%;
   margin: 0;
   height: auto;
-  font-size: 2.1vh;
+  font-size: 1.4vw;
   background-color: transparent;
   color: white;
   border: solid 3px rgb(0,146,122);
@@ -142,9 +142,11 @@ button #design-link-outline {
   right: 0rem;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus .dropdown-content {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 
 #inner-nav {
@@ -199,7 +201,7 @@ transition: transform 1s;
 }
 
 #cart:hover {
-transform: rotateY(360deg);
+transform: scale(1.1);
 }
 
 #cart a.nav-active {

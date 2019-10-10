@@ -1,24 +1,24 @@
 {
-  "application.js": "/packs/js/application-983298e77d6519ed3478.js",
-  "application.js.map": "/packs/js/application-983298e77d6519ed3478.js.map",
+  "application.js": "/packs/js/application-d1f339f87bc937e3a1fe.js",
+  "application.js.map": "/packs/js/application-d1f339f87bc937e3a1fe.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-983298e77d6519ed3478.js"
+        "/packs/js/application-d1f339f87bc937e3a1fe.js"
       ],
       "js.map": [
-        "/packs/js/application-983298e77d6519ed3478.js.map"
+        "/packs/js/application-d1f339f87bc937e3a1fe.js.map"
       ]
     },
     "product": {
       "js": [
-        "/packs/js/product-4220b4df6db0960d9fd8.js"
+        "/packs/js/product-93d36d7459907736ac46.js"
       ],
       "js.map": [
-        "/packs/js/product-4220b4df6db0960d9fd8.js.map"
+        "/packs/js/product-93d36d7459907736ac46.js.map"
       ]
     }
   },
-  "product.js": "/packs/js/product-4220b4df6db0960d9fd8.js",
-  "product.js.map": "/packs/js/product-4220b4df6db0960d9fd8.js.map"
+  "product.js": "/packs/js/product-93d36d7459907736ac46.js",
+  "product.js.map": "/packs/js/product-93d36d7459907736ac46.js.map"
 }

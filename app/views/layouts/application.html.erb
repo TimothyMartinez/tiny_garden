@@ -22,7 +22,7 @@
         <ul class="left-side-nav">
           <li><%= link_to "Shop", products_path, class: params[:action] == 'index' ? 'nav-active' : ''  %></li>
           <li id="care-nav-link"><%= link_to "Care", care_path, class: params[:action] == 'care' ? 'nav-active' : ''  %></li>
-          <button class="btn-round yellow nav-design-btn" >
+          <button id="design-button-nav" class="btn-round yellow nav-design-btn" >
             <%= link_to "Design", design_path %>
           </button>
         </ul>
