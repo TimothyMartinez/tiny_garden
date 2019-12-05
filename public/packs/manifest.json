@@ -12,13 +12,13 @@
     },
     "product": {
       "js": [
-        "/packs/js/product-93d36d7459907736ac46.js"
+        "/packs/js/product-372d92b883d9f3b72d38.js"
       ],
       "js.map": [
-        "/packs/js/product-93d36d7459907736ac46.js.map"
+        "/packs/js/product-372d92b883d9f3b72d38.js.map"
       ]
     }
   },
-  "product.js": "/packs/js/product-93d36d7459907736ac46.js",
-  "product.js.map": "/packs/js/product-93d36d7459907736ac46.js.map"
+  "product.js": "/packs/js/product-372d92b883d9f3b72d38.js",
+  "product.js.map": "/packs/js/product-372d92b883d9f3b72d38.js.map"
 }
