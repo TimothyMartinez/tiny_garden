@@ -28,7 +28,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'instagram'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
-gem 'httparty'
+gem 'httparty', '>= 0.21.0'
 
 
 # Use Active Storage variant
