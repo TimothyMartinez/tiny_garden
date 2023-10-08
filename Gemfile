@@ -5,7 +5,7 @@ ruby '2.6.3'
 
 gem 'hirb'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.0.rc2'
+gem 'rails', '~> 7.1.0.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -14,7 +14,7 @@ gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 4.0'
-gem 'react_on_rails', '11.1.4'
+gem 'react_on_rails', '11.1.5'
 gem 'erd'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
